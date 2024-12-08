@@ -1,0 +1,5 @@
+src/core/node_modules
+src/server/node_modules
+src/frontend/node_modules
+src/server/package-lock.json
+src/core/package-lock.json
