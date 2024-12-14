@@ -1,0 +1,87 @@
+/* Sidebar Styling */
+.sidebar {
+    margin: 10px 10px;
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    transition: width 0.3s ease;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar .toggle-btn {
+    background: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+.add-category-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu-item {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+.category-section {
+    margin-top: 10px;
+}
+
+.menu-split {
+    border: none;
+    border-top: 1px solid #555;
+    margin: 10px 0;
+}
+
+/* Collapsed Sidebar Adjustments */
+.sidebar.collapsed .menu-item {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.sidebar.collapsed .add-category-btn,
+.sidebar.collapsed .search-input {
+    display: none;
+}
