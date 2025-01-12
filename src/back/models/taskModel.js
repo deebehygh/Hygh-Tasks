@@ -1,7 +1,7 @@
 const redis = require("redis");
 const { scheduleReminder } = require("../utils/scheduleReminder");
 const { getCategoryById } = require("./categoryModel");
-const client = redis.createClient({ url: 'redis://default:7yZMF3RYUWDKMnGSkGgQuo1OANqHYdnM@redis-16063.c278.us-east-1-4.ec2.redns.redis-cloud.com:16063' });
+const client = redis.createClient();
 
 client.on("error", (err) => console.error("Redis Client Error", err));
 client.connect();
