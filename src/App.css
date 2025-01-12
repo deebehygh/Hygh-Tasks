@@ -1,0 +1,93 @@
+/* General Layout */
+
+.sidebar {
+    width: 250px;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 40px;
+    display: contents;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.menu li svg {
+    margin-right: 10px;
+}
+
+.split-line {
+    border: 0.5px solid #95a5a6;
+    margin: 10px 0;
+}
+
+.task-details {
+    display: flex;
+    margin: 0;
+  }
+  
+  .task-details h3 {
+    margin: 0;
+    font-size: 24px;
+    word-wrap: break-word;
+  }
+  
+  .task-details p {
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  
+  .add-btn,
+  .save-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-btn:hover,
+  .save-btn:hover {
+    background-color: #27ae60;
+  }
+  /* Inline Edit Form */
+  .edit-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .edit-form input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
