@@ -159,9 +159,9 @@ const TaskForm = ({ category, setTasks }) => {
     }
     setNewTask("");
     setDeadline("");
-    setTags([]);
+    //setTags([]);
     setReminder(null);
-    setSelectedTags([]);
+    //setSelectedTags([]);
     addNotification(NotificationType.SUCCESS, 'Successfully added new task.');
   };
 
@@ -241,6 +241,7 @@ const TaskForm = ({ category, setTasks }) => {
               style={styles.icon}
               onClick={handleDateClick}
             />
+            {/* Tasks Tags */}
             { /* <FaTag
               title="Add tags"
               style={styles.icon}

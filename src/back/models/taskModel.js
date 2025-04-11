@@ -1,6 +1,5 @@
 const redis = require("redis");
 const { scheduleReminder } = require("../utils/scheduleReminder");
-const { getCategoryById } = require("./categoryModel");
 const client = redis.createClient();
 
 client.on("error", (err) => console.error("Redis Client Error", err));
@@ -24,10 +23,7 @@ exports.addTaskToRedis = async (taskData) => {
     }
 
     const catData = await client.get("categories");
-    if (!catData) {
-      throw new Error("No categories found");
-    }
-    let categories = JSON.parse(catData);
+    let categories = catData ? JSON.parse(catData) : [];
     let catIndex = categories.findIndex((cat) => cat.id === categoryId);
     if (catIndex === -1) {
       const newCategory = {
@@ -39,10 +35,8 @@ exports.addTaskToRedis = async (taskData) => {
       categories.push(newCategory);
       catIndex = categories.length - 1;
     } else {
-      categories[catIndex].numberOfTasks =
-        categories[catIndex].numberOfTasks === -1
-          ? 1
-          : categories[catIndex].numberOfTasks + 1;
+      categories[catIndex].numberOfTasks = categories[catIndex].numberOfTasks === 0 
+      ? 1 : categories[catIndex].numberOfTasks + 1;
     }
 
     tasks.push(task);

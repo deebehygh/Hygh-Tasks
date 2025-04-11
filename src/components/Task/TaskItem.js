@@ -233,7 +233,7 @@ const TaskItem = ({ task, setTasks, tasks, deleteConfirm, setDeleteConfirm, show
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Are you sure you want to delete this task? Once this action is done, the task can be recoveried from 'Trash Bin' but it will be permentally deleted after 30 days.
+            Are you sure you want to delete this task? Once this action is done, the task can be recovered from 'Trash Bin' but it will be permentally deleted after 30 days.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
