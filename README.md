@@ -20,14 +20,14 @@ Before getting started, make sure you have the following installed:
    git clone <repository-url>
    ```
 
-2. Navigate into the `hyghtask` folder:
+2. Navigate into the `Hygh-Task` folder:
    ```bash
-   cd hyghtask
+   cd Hygh-Task
    ```
 
 3. Install the dependencies:
    ```bash
-   npm install
+   npm install --force
    ```
 
 > [!TIP] 
